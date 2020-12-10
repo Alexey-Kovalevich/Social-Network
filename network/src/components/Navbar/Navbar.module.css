@@ -1,0 +1,19 @@
+.nav {
+  grid-area: nav;
+  background-color: purple;
+}
+
+.nav a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.item {
+  color: #ffffff;
+  padding: 15px;
+}
+
+.item.active {
+  color: gold;
+}

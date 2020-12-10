@@ -10,26 +10,7 @@
   /* grid-gap: 10; */
 }
 
-.header {
-  grid-area: header;
-  background-color: gray;
-}
-
-.header img {
-  width: 40px;
-}
-
-.nav {
-  grid-area: nav;
-  background-color: yellow;
-}
-
-.nav a {
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
+.app-wrapper-content {
   grid-area: content;
   background-color: wheat;
 }
