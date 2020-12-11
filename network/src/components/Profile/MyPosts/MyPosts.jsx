@@ -2,7 +2,10 @@ import React from 'react';
 import style from './MyPosts.module.css';
 import Post from './Post/Post';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+  let postElements = props.posts.map( p => <Post message={p.message} likeCount={p.likeCount} /> )
+
   return (
     <div className={style.myPosts}>
       <h3>My Posts</h3>
@@ -17,9 +20,7 @@ const MyPosts = () => {
         New Post
         </div>
       <div>
-        <Post message='Hi, how are you?' likeCount='15' />
-        <Post message='Hi, nice to meet you!' likeCount='30' />
-        <Post message='Wow, props are great' likeCount='9' />
+        { postElements }
       </div>
     </div>
   )
