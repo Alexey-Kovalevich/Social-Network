@@ -1,0 +1,33 @@
+.dialog {
+  box-sizing: border-box;
+}
+
+.dialog:hover {
+  background-color: rgb(241, 215, 165);
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  padding: 15px;
+}
+
+.person a {
+  text-decoration: none;
+}
+
+.person a:hover {
+  text-decoration: underline;
+}
+
+.image {
+  display: inline-block;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
