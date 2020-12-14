@@ -22,7 +22,6 @@
 }
 
 .image {
-  display: inline-block;
   box-sizing: border-box;
   display: flex;
   justify-content: center;

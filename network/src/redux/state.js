@@ -8,7 +8,6 @@ let state = {
   },
 
   dialogsPage: {
-    
     dialogs: [
       {
         id: 1,
@@ -47,7 +46,23 @@ let state = {
       { id: 2, avatar: 'https://yt3.ggpht.com/a/AATXAJwQGdYTENWYUrhjTz8xyL3IR6xskAH0eWdbJpkDGA=s900-c-k-c0xffffffff-no-rj-mo', message: 'How is your learning?' },
       { id: 3, avatar: 'https://yt3.ggpht.com/a/AATXAJyl_xtPKls2xJx_GVKIsf9YMpsCnq5-oGEMIg=s900-c-k-c0xffffffff-no-rj-mo', message: 'Cool' }
     ]
-  }
+  },
+
+  sidebar: [
+      {
+        avatar: 'https://www.zastavki.com/pictures/1600x1200/2008/World_Africa_Adult_Black-Backed_Jackal___Masai_Mara___Kenya___Africa_008853_.jpg',
+        name: 'Sasha'
+      },
+      {
+        avatar: 'https://yt3.ggpht.com/a/AATXAJwQGdYTENWYUrhjTz8xyL3IR6xskAH0eWdbJpkDGA=s900-c-k-c0xffffffff-no-rj-mo',
+        name: 'Victor'
+      },
+      {
+        avatar: 'https://sun9-45.userapi.com/c604817/v604817996/320e8/92Y2VW1QdZ8.jpg',
+        name: 'Valera'
+      }
+    ]
+
 }
 
 
