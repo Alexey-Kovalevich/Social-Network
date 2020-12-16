@@ -21,4 +21,9 @@
   border: 0;
   background-color: purple;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.addMessage_send:hover {
+  background-color: rgb(109, 0, 109);
 }

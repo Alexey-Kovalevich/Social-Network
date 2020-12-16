@@ -4,16 +4,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 
 
 let rerenderEtrireTree = (state) => {
   ReactDOM.render(
+    <BrowserRouter>
     <React.StrictMode>
       <App 
         state={state} 
-        addPost={store.addPost.bind(store)} 
-        updateNewPostText={store.updateNewPostText.bind(store)}/>
-    </React.StrictMode>,
+        dispatch={store.dispatch.bind(store)}
+        store={store} />
+    </React.StrictMode>
+    </BrowserRouter>,
     document.getElementById('root')
   );
 }

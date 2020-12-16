@@ -1,3 +1,8 @@
+import dialogsReducer from "./dialogs-reducer";
+import profileReducer from "./profile-reducer";
+import sidebarReducer from "./sidebar-reducer";
+
+
 let store = {
   _state: {
     profilePage: {
@@ -47,7 +52,9 @@ let store = {
         { id: 1, avatar: 'https://yt3.ggpht.com/a/AATXAJyl_xtPKls2xJx_GVKIsf9YMpsCnq5-oGEMIg=s900-c-k-c0xffffffff-no-rj-mo', message: 'Hi' },
         { id: 2, avatar: 'https://yt3.ggpht.com/a/AATXAJwQGdYTENWYUrhjTz8xyL3IR6xskAH0eWdbJpkDGA=s900-c-k-c0xffffffff-no-rj-mo', message: 'How is your learning?' },
         { id: 3, avatar: 'https://yt3.ggpht.com/a/AATXAJyl_xtPKls2xJx_GVKIsf9YMpsCnq5-oGEMIg=s900-c-k-c0xffffffff-no-rj-mo', message: 'Cool' }
-      ]
+      ],
+
+      newMessageBody: '',
     },
   
     sidebar: [
@@ -66,36 +73,31 @@ let store = {
     ]
   },
 
-  getState() {
-    return this._state;
-  },
-
   _callSubscriber() {
     console.log('State is changed');
   },
 
-  addPost() {
-    let newPost = {
-      id: 5,
-      message: this._state.profilePage.newPostText,
-      likeCount: 0
-    }
-  
-    this._state.profilePage.posts.push(newPost);
-    this._state.profilePage.newPostText = '';
-    this._callSubscriber(this._state);
-  },
 
-  updateNewPostText(newText) {
-
-    this._state.profilePage.newPostText = newText;
-    this._callSubscriber(this._state);
+  getState() {
+    return this._state;
   },
 
   subscribe(observer) {
     this._callSubscriber = observer;
+  },
+
+
+  dispatch(action) {
+
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+    this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+
+    this._callSubscriber(this._state);
   }
 }
+
+
 
 export default store;
 window.store = store;
